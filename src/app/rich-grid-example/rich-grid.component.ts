@@ -45,10 +45,22 @@ export class RichGridComponent {
             resizable: true,
             sortable: true,
             filter: true,
+            editable: true,
             headerComponent: 'sortableHeaderComponent',
             headerComponentParams: {
                 menuIcon: 'fa-bars'
-            }
+            },
+            // allows copy / paste using cell ranges
+            enableRangeSelection: true,
+
+            // enables the fill handle
+            enableFillHandle: true,
+
+            // enables undo / redo
+            undoRedoCellEditing: true,
+
+            // restricts the number of undo / redo steps to 5
+            undoRedoCellEditingLimit: 5,
         };
 
         this.frameworkComponents = {

@@ -1,4 +1,4 @@
-<div style="width: 900px; margin-left: 10px">
+<div style="width: calc(100% - 2em); margin: 1em;">
     <h1>Rich Grid Example</h1>
     <div style="display: inline-block; width: 100%">
         <div style="float: left">
@@ -45,6 +45,7 @@
                      [columnDefs]="columnDefs"
                      [sideBar]="sideBar"
                      [rowData]="rowData"
+                     editType="fullRow"
 
                      [defaultColDef]="defaultColDef"
                      [dateComponent]="'dateComponent'"
@@ -58,6 +59,7 @@
 
                      suppressRowClickSelection
                      rowSelection="multiple"
+                     pagination="true"
 
                      (gridReady)="onGridReady($event)"
                      (modelUpdated)="onModelUpdated()"
